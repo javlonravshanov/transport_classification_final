@@ -1,14 +1,19 @@
 import streamlit as st
 from fastai.vision.all import *
+import pathlib
+import plotly.express as px
+
+plt = platform.system()
+if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
+
+
 st.write("""
 # Transport classification model
 A model that identifies the type of transport from the image you have uploaded \n
 *P.S. Please upload only transport images, others are not supported*         
 """)
-import pathlib
-temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
-import plotly.express as px
+
+
 
 
 file = st.file_uploader('Upload image', type=['png', 'jpg', 'jpeg', 'gif', 'svg'])
