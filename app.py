@@ -3,8 +3,8 @@ from fastai.vision.all import *
 import pathlib
 import plotly.express as px
 
-plt = platform.system()
-if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
+# plt = platform.system()
+# if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath
 
 
 st.write("""
@@ -20,6 +20,8 @@ file = st.file_uploader('Upload image', type=['png', 'jpg', 'jpeg', 'gif', 'svg'
 if file:
     st.image(file)
     img = PILImage.create(file)
+
+    
     model = load_learner('transport_types.pkl')
 
     pred, pred_id, probs = model.predict(img)
