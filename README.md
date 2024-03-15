@@ -8,6 +8,7 @@ High Accuracy: Through rigorous training and validation, we have achieved a high
 Robustness: The model has been tested on a diverse range of images and demonstrates robust performance across various environmental conditions and image qualities.
 
 Tools used:
+- Google Colab
 - PyTorch
 - Fastai
 - Streamlit
